@@ -48,3 +48,6 @@ The `Pet` class includes:
 
 ## Assignment Completion
 This project was created as part of the Python OOP Challenge to demonstrate the implementation of Object-Oriented Programming concepts.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
