@@ -33,9 +33,9 @@ The `Pet` class includes:
 
 ### Attributes:
 - `name`: The name of your pet
-- `hunger`: Integer (0-10) representing hunger level (0 = full, 10 = very hungry)
+- `hunger`: Integer (0–10) representing hunger level (0 = full, 10 = very hungry)
 - `energy`: Integer (0-10) representing energy level (0 = tired, 10 = fully rested)
-- `happiness`: Integer (0-10) representing how happy your pet is
+- `happiness`: Integer (0–10) representing how happy your pet is
 - `tricks`: List of tricks your pet has learned
 
 ### Methods:
@@ -45,6 +45,29 @@ The `Pet` class includes:
 - `get_status()`: Displays the current state of the pet
 - `train(trick)`: Teaches your pet a new trick
 - `show_tricks()`: Displays all the tricks your pet has learned
+
+## Potential Future Enhancements
+Here are some ideas for expanding this project in the future:
+
+1. **Multiple Pet Types** - Create different pet classes (Dog, Cat, Rabbit, etc.) that inherit from a base Pet class but have unique behaviors and needs
+
+2. **Time-Based Simulation** - Implement a real-time element where pet needs change over time even when not interacting with them
+
+3. **Graphical User Interface** - Add a visual interface using Pygame, Tkinter, or another Python GUI library to display your pet and its environment
+
+4. **Pet Lifecycle** - Add growth stages (baby, adolescent, adult, senior) that affect behavior and needs
+
+5. **Health System** - Implement a health attribute with potential illnesses that require special care
+
+6. **Save/Load Functionality** - Allow users to save their pet's state to a file and load it later to continue playing
+
+7. **Multiple Pets** - Enable users to have multiple pets that can interact with each other
+
+8. **Weather/Environment** - Add environmental factors that affect your pet's mood and behavior
+
+9. **Toys and Items** - Implement an inventory system with toys and items that have different effects on your pet
+
+10. **Achievement System** - Create milestones and rewards for successful pet care
 
 ## Assignment Completion
 This project was created as part of the Python OOP Challenge to demonstrate the implementation of Object-Oriented Programming concepts.
