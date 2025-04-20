@@ -27,6 +27,16 @@ class Pet:
     def get_status(self):
         """Prints the current state of the pet"""
         print(f"\n--- {self.name}'s Status ---")
-        print(f"Hunger: {self.hunger}/10")
-        print(f"Energy: {self.energy}/10")
-        print(f"Happiness: {self.happiness}/10")
+        print(f"Hunger: {self.hunger}/10 {'🍖' * self.hunger}")
+        print(f"Energy: {self.energy}/10 {'⚡' * self.energy}")
+        print(f"Happiness: {self.happiness}/10 {'😊' * self.happiness}")
+
+        # Add mood description based on stats
+        if self.hunger > 7:
+            print(f"{self.name} is very hungry!")
+        if self.energy < 3:
+            print(f"{self.name} is feeling tired...")
+        if self.happiness < 3:
+            print(f"{self.name} is feeling sad...")
+        elif self.happiness > 7:
+            print(f"{self.name} is super happy!")
