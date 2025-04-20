@@ -5,6 +5,7 @@ class Pet:
         self.hunger = 5  # Starting at middle value (0 = full, 10 = very hungry)
         self.energy = 5  # Starting at middle value (0 = tired, 10 = fully rested)
         self.happiness = 5  # Starting at middle value
+        self.tricks = []  # List to store learned tricks
 
     def eat(self):
         """Reduces hunger by 3 (not below 0) and increases happiness by 1"""
@@ -23,6 +24,25 @@ class Pet:
         self.happiness = min(10, self.happiness + 2)  # Ensure happiness doesn't exceed 10
         self.hunger = min(10, self.hunger + 1)  # Ensure hunger doesn't exceed 10
         print(f"{self.name} had a great time playing!")
+
+    def train(self, trick):
+        """Teaches pet a new trick and adds it to the tricks' list"""
+        if trick in self.tricks:
+            print(f"{self.name} already knows how to {trick}!")
+        else:
+            self.tricks.append(trick)
+            self.energy = max(0, self.energy - 1)  # Training takes a bit of energy
+            self.happiness = min(10, self.happiness + 1)  # Learning makes pet happy
+            print(f"{self.name} has learned to {trick}! 🎓")
+
+    def show_tricks(self):
+        """Displays all tricks the pet has learned"""
+        if not self.tricks:
+            print(f"{self.name} doesn't know any tricks yet.")
+        else:
+            print(f"\n--- {self.name}'s Tricks ---")
+            for i, trick in enumerate(self.tricks, 1):
+                print(f"{i}. {trick}")
 
     def get_status(self):
         """Prints the current state of the pet"""
